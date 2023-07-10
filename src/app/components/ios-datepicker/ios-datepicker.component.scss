@@ -1,0 +1,9 @@
+.date-wheel-picker {
+  display: flex;
+  height: auto;
+  width: 100%;
+
+  app-ios-wheelpicker {
+    flex: 1;
+  }
+}

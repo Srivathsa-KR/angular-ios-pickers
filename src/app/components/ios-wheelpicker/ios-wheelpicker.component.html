@@ -1,0 +1,13 @@
+<div #listContainer class="wheel-picker-container">
+  <div class="wheel-container">
+    <ul class='handle' [ngStyle]="inlineListStyle">
+      <ng-container *ngFor="let item of dataList; let index=index;trackBy:trackByIndex">
+        <li>{{item}}</li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="overlay-panel">
+    <div class="active-panel">
+    </div>
+  </div>
+</div>

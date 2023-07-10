@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ALLOWED_DATES_ENUM } from './components/ios-datepicker/ios-datepicker.constants';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-ios-datepicker';
+  selectedDate = new Date()
+  readonly ALLOWED_DATES = ALLOWED_DATES_ENUM; 
+  onDateSelected(event : Date){
+    this.selectedDate = event
+  }
 }

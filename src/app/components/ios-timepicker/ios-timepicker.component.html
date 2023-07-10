@@ -1,0 +1,25 @@
+<div class="date-wheel-picker">
+  <app-ios-wheelpicker
+    class="ios-picker"
+    [dataList]="HOURS_ARRAY"
+    [indexOfSelected]="getIndexOfSelectedHour()"
+    (onChange)="onHourChange($event)"
+    [defaultSetting]="DEFAULT_TO_STRATEGY.DEFAULT_TO_END"
+  ></app-ios-wheelpicker>
+  <app-ios-wheelpicker
+    class="ios-picker"
+    [dataList]="MIN_ARRAY_STATE"
+    [indexOfSelected]="MIN_ARRAY_STATE.indexOf(selectedDate.getMinutes())"
+    (onChange)="onMinuteChange($event)"
+    [targetValue]="selectedDate.getMinutes()"
+    [defaultSetting]="DEFAULT_TO_STRATEGY.DEFAULT_TO_CLOSEST"
+  ></app-ios-wheelpicker>
+  <app-ios-wheelpicker
+    *ngIf="timeFormat === TIME_FORMAT_ENUM.TWELVE_HOUR_FORMAT"
+    class="ios-picker"
+    [dataList]="MERIDIEM_ARRAY"
+    [indexOfSelected]="MERIDIEM_ARRAY.indexOf(meridiem)"
+    (onChange)="onMeridiemChange($event)"
+    [defaultSetting]="DEFAULT_TO_STRATEGY.DEFAULT_TO_END"
+  ></app-ios-wheelpicker>
+</div>

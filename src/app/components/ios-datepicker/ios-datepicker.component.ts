@@ -6,15 +6,7 @@ import {
 import {  DEFAULT_SETTING_ENUM } from '../ios-wheelpicker/ios-wheelpicker.component';
 
 import { MONTHS, YEARS } from './ios-datepicker.constants';
-
-export const getMaxDaysInMonth = (year: number, month : number) => {
-  return new Date(year, month + 1, 0).getDate();
-};
-
-//Taking year as a parameter to account for the edge case of Feb in a leap year
-export const getListOfAllDates = (year : number, month : number) => {
-  return new Array(getMaxDaysInMonth(year, month)).fill(1).map((value, index) => value + index);
-};
+import { getListOfAllDates, getMaxDaysInMonth, getMinimum } from '../utils/utils';
 
 @Component({
   selector: 'app-ios-datepicker',
@@ -129,13 +121,9 @@ export class IosDatepickerComponent implements OnInit, OnChanges {
     }
   }
 
-  private getMinOfDays(maxDaysInMonth: number): number {
-    return Math.min(this.selectedDate.getDate(), maxDaysInMonth);
-  }
-
   private getDayToBeSet(year: number, month: number): number {
     const maxDaysInMonth = getMaxDaysInMonth(year, month);
-    return this.getMinOfDays(maxDaysInMonth);
+    return getMinimum(maxDaysInMonth, this.selectedDate.getDate());
   }
 
   private emitNewlySelectedDate(year:number, month:number, date: number) {

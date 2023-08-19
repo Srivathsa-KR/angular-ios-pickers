@@ -1,1 +1,10 @@
-<app-ios-datepicker [(date)]="selectedDate" [allowedDates]="ALLOWED_DATES.FUTURE_DATES"/>
+<div class="widget-container">
+    <div class="date-picker-container">
+        <!-- <p class="selected-date"> {{selectedFutureDate}}</p> -->
+        <app-ios-datepicker [(date)]="selectedFutureDate" [allowedDates]="ALLOWED_DATES.FUTURE_DATES"/>
+    </div>
+    <div class="date-picker-container">
+        <!-- <p class="selected-date"> {{selectedPastDate}}</p> -->
+        <app-ios-datepicker [(date)]="selectedPastDate" [allowedDates]="ALLOWED_DATES.PAST_DATES"/>
+    </div>
+</div>

@@ -7,9 +7,8 @@ import { ALLOWED_DATES_ENUM } from './components/ios-datepicker/ios-datepicker.c
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedDate = new Date()
-  readonly ALLOWED_DATES = ALLOWED_DATES_ENUM; 
-  onDateSelected(event : Date){
-    this.selectedDate = event
-  }
+  selectedFutureDate = new Date();
+  selectedPastDate = new Date()
+
+  readonly ALLOWED_DATES = ALLOWED_DATES_ENUM;
 }

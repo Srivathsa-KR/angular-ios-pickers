@@ -2,8 +2,9 @@
   display: flex;
   height: auto;
   width: 100%;
+  justify-content: center;
 }
 
 .ios-picker {
-  flex: 1;
+  flex: 0.2;
 }

@@ -18,7 +18,7 @@
     *ngIf="timeFormat === TIME_FORMAT_ENUM.TWELVE_HOUR_FORMAT"
     class="ios-picker"
     [dataList]="MERIDIEM_ARRAY"
-    [indexOfSelected]="MERIDIEM_ARRAY.indexOf(meridiem)"
+    [indexOfSelected]="MERIDIEM_ARRAY.indexOf(meridiemOfSelectedDate)"
     (onChange)="onMeridiemChange($event)"
     [defaultSetting]="DEFAULT_TO_STRATEGY.DEFAULT_TO_END"
   ></app-ios-wheelpicker>

@@ -2,8 +2,10 @@
   display: flex;
   height: auto;
   width: 100%;
+  justify-content: center;
+  // max-width: 15rem;
 
   app-ios-wheelpicker {
-    flex: 1;
+    flex: 0.2;
   }
 }

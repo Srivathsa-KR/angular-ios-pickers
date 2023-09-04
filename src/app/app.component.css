@@ -1,5 +1,11 @@
-.dates-container, .time-container{
+.app-container {
+    scroll-snap-type: y mandatory;
     background-color: rgb(224, 224, 224);
+    overflow-y: scroll;
+    height: 100%; /*important*/
+}
+.widget-container{
+    scroll-snap-align: start;
 }
 .widget-container {
     display: flex;

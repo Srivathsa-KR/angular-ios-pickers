@@ -1,1 +1,22 @@
-<app-ios-datepicker [(date)]="selectedDate" [allowedDates]="ALLOWED_DATES.FUTURE_DATES"/>
+<div class="app-container">
+    <div class="widget-container dates-container">
+        <div class="date-picker-container">
+            <p class="selected-date"> {{selectedFutureDate | date: 'dd MMM y'}}</p>
+            <app-ios-datepicker [(date)]="selectedFutureDate" [allowedDates]="ALLOWED_DATES.FUTURE_DATES"/>
+        </div>
+        <div class="date-picker-container">
+            <p class="selected-date"> {{selectedPastDate | date: 'dd MMM y'}}</p>
+            <app-ios-datepicker [(date)]="selectedPastDate" [allowedDates]="ALLOWED_DATES.PAST_DATES"/>
+        </div>
+    </div>
+    <div class="widget-container time-container">
+        <div class="time-picker-container">
+            <p class="selected-time"> {{dateFor12HourTime | date: 'h:mm a'	}}</p>
+            <app-ios-timepicker [(date)]="dateFor12HourTime" [timeFormat]="TIME_FORMAT.TWELVE_HOUR_FORMAT"/>
+        </div>
+        <div class="time-picker-container">
+            <p class="selected-time"> {{dateFor24HourTime | date: 'HH:mm'	}}</p>
+            <app-ios-timepicker [(date)]="dateFor24HourTime" [timeFormat]="TIME_FORMAT.TWENTY_FOUR_HOUR_FORMAT" [intervalStep]="15"/>
+        </div>
+    </div>
+</div>

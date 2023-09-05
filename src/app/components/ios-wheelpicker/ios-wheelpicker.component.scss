@@ -1,6 +1,7 @@
 .wheel-picker-container {
   --item-height: 50px;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: rgb(224, 224, 224);
   width: 100%;
   height: calc(3 * var(--item-height));
   position: relative;
@@ -21,6 +22,7 @@
         width: 100%;
         height: 50px;
         user-select: none;
+        font-family: 'Roboto', sans-serif;
       }
     }
   }
@@ -38,8 +40,8 @@
     .active-panel {
       height: var(--item-height);
       width: 100%;
-      border-top: 2px solid #e0e0e0;
-      border-bottom: 2px solid #e0e0e0;
+      border-top: 1.5px solid #aeaeae;
+      border-bottom: 1.5px solid #aeaeae;
       position: relative;
       --passive-overlay-pos: calc(-1 * (var(--item-height) + 1px));
 
@@ -50,8 +52,9 @@
         left: 0;
         height: var(--item-height);
         width: 100%;
-        background-color: #fff;
-        opacity: 0.8;
+        // background-color: #fff;
+        background-color: rgb(224, 224, 224);
+        opacity: 0.6;
         pointer-events: none;
         z-index: 1;
       }

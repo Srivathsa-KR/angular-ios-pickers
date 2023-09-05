@@ -41,8 +41,8 @@ export class IosWheelpickerComponent implements OnInit, OnChanges {
 
   private offset: number = 0; //Variable denoting the magnitude and direction of the amount of scroll. Range?
   private previousYCoordinate: number | null = null;
-  private currentPosition: number; //Range : (0, -(50 * len of array))
-  private maxPossiblePosition: number; //-(50 * len of array)
+  private currentPosition: number; //Range : (0, -(50[LIST_ITEM_HEIGHT] * len of array))
+  private maxPossiblePosition: number; //-(50[LIST_ITEM_HEIGHT] * len of array)
   private scrollTimeout: number;
   private unlistenerArray: Array<() => void> = [];
   public inlineListStyle: Object;

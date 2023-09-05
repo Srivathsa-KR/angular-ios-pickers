@@ -1,0 +1,29 @@
+.app-container {
+    scroll-snap-type: y mandatory;
+    background-color: rgb(224, 224, 224);
+    overflow-y: scroll;
+    height: 100%; /*important*/
+}
+.widget-container{
+    scroll-snap-align: start;
+}
+.widget-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.date-picker-container, .time-picker-container{
+    flex: 1;
+    margin: 0 4rem;
+    /* border: 1px solid gray; */
+    max-width: 45%;
+}
+
+.selected-time, .selected-date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.55rem;
+}
